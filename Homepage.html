@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Personal Journal</title>
+  <link rel="stylesheet" href="homepagedes.css" />
+</head>
+<body>
+  <header>
+    <h1>WPE Journal</h1>
+    <p>Reflections, thoughts, and daily entries</p>
+  </header>
+
+  <nav class="nay">
+    <button data-category="all">All</button>
+    <button data-category="Culture">Culture</button>
+    <button data-category="Community">Community</button>
+    <button data-category="Church">Church</button>
+    <button data-category="Classroom">Classroom</button>
+    <button data-category="Court">Court</button>
+  </nav>
+
+  <main>
+    <!-- Entries -->
+    <div class="entry" data-category="Church">
+      <h2>July 30, 2025</h2>
+      <p>points: 1pts</p>
+      <h3>University Wide Convocation</h3>
+      <div class="pic">
+        <span><img src="pics/1st convo.jfif" alt="Convocation"/></span>
+      </div>
+      <h3>Essay</h3>
+      <p>Very nice convocation, it really opened up what the university could be from all the insights of the heads.</p>
+    </div>
+
+    <div class="entry" data-category="Community">
+      <h2>August 2, 2025</h2>
+      <div class="pic">
+      <img src="pics/freshie walk.jfif" alt="Freshie Walk" />
+      </div>
+      <p>Great walk, not so great weather (why rain?).</p>
+    </div>
+
+    <div class="entry" data-category="Culture">
+      <h2>July 10, 2025</h2>
+      <h3>Exploring the World War II Museum</h3>
+      <div class="pic">
+      <img src="pics/5b7e8ca7-d63e-44a8-a109-a88b4da62916.jfif" alt="WW2 Museum" />
+      </div>
+      <p>I liked the monuments and all the things found, spent my time exploring the entire thing.</p>
+    </div>
+
+    <div class="entry" data-category="Culture">
+      <h2>July 10, 2025</h2>
+      <h3>Filipiniana Event</h3>
+      <div class="pic">
+      <img src="pics/filipino event.jfif" alt="Filipiniana" />
+      </div>
+      <p>Amazing cultural experience filled with colorful traditions and energy.</p>
+    </div>
+
+    <div class="entry" data-category="Classroom">
+      <h2>Activity 2</h2>
+      <div class="pic">
+      <img src="pics/orientation.jfif" alt="Orientation" />
+      </div>
+      <p>Great and relatable moments with speakers and classmates, enjoyed it very much.</p>
+    </div>
+
+    <div class="entry" data-category="Court">
+      <h2>Game</h2>
+      <div class="pic">
+      <img src="pics/gym.jfif" alt="Gym" />
+      </div>
+      <p>Gym fun! Feeling stronger every day.</p>
+    </div>
+
+    <div class="entry" data-category="Classroom">
+      <h2>July 30, 2025</h2>
+      <p>points: 1pts</p>
+      <h3>Library Assignment</h3>
+      <div class="pic">
+        <span><img src="pics/library thing.jfif" alt="Library" /></span>
+      </div>
+      <h3>Essay</h3>
+      <p>The library event was tame and not much happened throughout the activity.</p>
+    </div>
+
+    <div class="entry" data-category="Church">
+      <h2>July 30, 2025</h2>
+      <p>points: 1pts</p>
+      <h3>First Church</h3>
+      <div class="pic">
+        <span><img src="pics/church 1.jfif" alt="Church" /></span>
+      </div>
+      <h3>Essay</h3>
+      <p>An interesting church day — the readings deepened my understanding of faith and purpose.</p>
+    </div>
+
+    <div class="entry" data-category="Church">
+      <h2>July 30, 2025</h2>
+      <p>points: 1pts</p>
+      <h3>Christian Meeting</h3>
+      <div class="pic">
+        <span><img src="pics/christian event 1.jfif" alt="Christian Meeting" /></span>
+      </div>
+      <h3>Essay</h3>
+      <p>A short yet cheerful event where we sang and played Christian games — overall enjoyable!</p>
+    </div>
+  </main>
+
+  <footer>
+    &copy; Christian Derek D. Villanueva, GE 10 X
+  </footer>
+
+  <script>
+    // Efficient entry filtering
+function filterEntries(category) {
+  document.querySelectorAll(".entry").forEach(entry => {
+    entry.style.display =
+      category === "all" || entry.dataset.category === category
+        ? "block"
+        : "none";
+  });
+}
+
+// Apply filtering when buttons are clicked
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll("nav button").forEach(button => {
+    button.addEventListener("click", () =>
+      filterEntries(button.dataset.category)
+    );
+  });
+  filterEntries("all"); // Show all entries by default
+});
+
+  </script>
+</body>
+</html>

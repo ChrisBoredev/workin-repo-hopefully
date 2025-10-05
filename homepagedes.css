@@ -1,0 +1,130 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f2f2f2;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background: #3f51b5 url("pics/1d800bd0-4284-4970-b235-555b15f19242.jfif")
+    center/cover no-repeat;
+  color: #fff;
+  padding: 1em;
+  text-align: center;
+  position: sticky;
+  top: 0;
+}
+
+nav {
+  background: #8c95db;
+  padding: 1em;
+  text-align: center;
+  position: sticky;
+  top: 70px;
+}
+
+nav button {
+  background: #111c5c;
+  color: #fff;
+  border: 2px solid #111c5c;
+  padding: 12px 24px;
+  margin: 0.4em;
+  cursor: pointer;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+nav button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.151) 0%,
+    rgba(255, 255, 255, 0) 70%
+  );
+  transform: scale(0);
+  transition: transform 0.5s ease;
+}
+
+nav button:hover {
+  border-color: #102286;
+}
+
+nav button:hover::after {
+  transform: scale(4);
+}
+
+main {
+  padding: 2em;
+  max-width: 800px;
+  margin: 2em auto 5em;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.entry {
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 1.5em;
+  padding-bottom: 1.5em;
+}
+
+.entry:last-child {
+  border-bottom: none;
+}
+
+.entry h2 {
+  margin: 0.2em 0;
+}
+
+.entry p {
+  color: #555;
+  line-height: 1.6;
+}
+
+.pic {
+  position: relative;
+  width: 150px;
+  height: 100px;
+  margin: 10px 0;
+  cursor: pointer;
+  transition: transform 0.5s;
+}
+
+.pic:hover {
+  transform: translateY(-10px);
+}
+
+.pic span {
+  position: absolute;
+  inset: 6px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 1em;
+  z-index: 2;
+}
+
+.pic img {
+  width: 100%;
+  height: 100%;
+  border-radius: 1em;
+  object-fit: cover;
+}
+
+footer {
+  text-align: center;
+  padding: 1em;
+  background: #3f51b5;
+  color: #fff;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+    
